@@ -6,19 +6,78 @@
     <title>Publications - Dr. Aman Arora</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles for the Visual Cards (With Images) */
+        .pub-card {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            align-items: flex-start;
+        }
+        .pub-visual {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+        }
+        .pub-visual img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            transition: transform 0.2s;
+        }
+        .pub-visual img:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Styles for Standard Cards (Text Only) */
+        .card-no-img {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff; /* Blue accent line */
+        }
+        .card-no-img h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        .pub-content {
+            flex: 2;
+        }
+        .pub-tag {
+            display: inline-block;
+            background: #f0f7ff;
+            color: #0066cc;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .pub-card { flex-direction: column; }
+            .pub-visual { max-width: 100%; width: 100%; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">Dr. Aman Arora</a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html"class="active">Publications</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
                 <li><a href="gallery.html">Visual Gallery</a></li>
                 <li><a href="awards.html">Awards</a></li>
-                <li><a href="conferences.html" >Conferences</a></li>
+                <li><a href="conferences.html">Conferences</a></li>
                 <li><a href="lectures_training.html">Lectures & Training</a></li>
             </ul>
         </div>
@@ -36,207 +95,180 @@
             
             <h2 class="subsection-title">Journal Articles</h2>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Machine learning model optimization for flood susceptibility zonation over the Kosi megafan, Himalayan foreland basin, India</h3>
-                    <p class="card-subtitle">Scientific Reports 15, 32757 (2025)</p>
+            <div class="pub-card">
+                <div class="pub-visual">
+                    <a href="Kosi_SciRep.png" target="_blank">
+                        <img src="Kosi_SciRep.png" alt="Kosi Flood Risk Visual Abstract">
+                    </a>
                 </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Arora, A., Durga G, P., Pandey, M. et al.</p>
+                <div class="pub-content">
+                    <span class="pub-tag">Scientific Reports (2025)</span>
+                    <h3>Machine learning model optimization for flood susceptibility zonation over the Kosi megafan</h3>
+                    <p><strong>Authors:</strong> Arora, A.*, Durga G, P., Pandey, M. et al.</p>
+                    <p>Optimized 5 ML algorithms to map flood risks. The <b>ANN-MLP model</b> achieved <b>98.2% accuracy</b>, identifying that 28.7% of the region is at 'Very High' risk.</p>
                     <a href="https://doi.org/10.1038/s41598-025-07403-w" target="_blank" class="btn btn-link">View DOI →</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Decadal analysis and simulation of land use and land cover changes in Taiwan using machine learning and markov chain models</h3>
-                    <p class="card-subtitle">Environment, Development and Sustainability (2024)</p>
+            <div class="pub-card">
+                <div class="pub-visual">
+                    <a href="Taiwan_LULC.png" target="_blank">
+                        <img src="Taiwan_LULC.png" alt="Taiwan Urban Paradox Visual Abstract">
+                    </a>
                 </div>
-                <div class="card-content">
+                <div class="pub-content">
+                    <span class="pub-tag">Env. Dev. & Sustainability (2024)</span>
+                    <h3>Decadal analysis and simulation of land use changes in Taiwan using ML and Markov chains</h3>
                     <p><strong>Authors:</strong> Liu, C., & Arora, A.*</p>
+                    <p>Identified a critical urban paradox: a <b>140% increase</b> in built-up area (1990-2020) despite a projected population decline.</p>
                     <a href="https://doi.org/10.1007/s10668-024-05859-w" target="_blank" class="btn btn-link">View DOI →</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Landslide susceptibility assessment and mapping using new ensemble model</h3>
-                    <p class="card-subtitle">Advances in Space Research (2024)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Shen, Z., Wang, D., Arabameri, A., Santosh, M., Egbueri, J. C., & Arora, A.</p>
-                    <a href="https://doi.org/10.1016/J.ASR.2024.06.018" target="_blank" class="btn btn-link">View DOI →</a>
-                </div>
+            <div class="card-no-img">
+                <h3>Landslide susceptibility assessment and mapping using new ensemble model</h3>
+                <p class="card-subtitle">Advances in Space Research (2024)</p>
+                <p><strong>Authors:</strong> Shen, Z., Wang, D., Arabameri, A., Santosh, M., Egbueri, J. C., & Arora, A.</p>
+                <a href="https://doi.org/10.1016/J.ASR.2024.06.018" target="_blank" class="btn btn-link">View DOI →</a>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Earth fissure susceptibility mapping: Application of random subspace‐based novel ensemble approaches</h3>
-                    <p class="card-subtitle">Geological Journal (2024)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Santosh, M., Arabameri, A., & Arora, A.</p>
-                    <a href="https://doi.org/10.1002/gj.4932" target="_blank" class="btn btn-link">View DOI →</a>
-                </div>
+            <div class="card-no-img">
+                <h3>Earth fissure susceptibility mapping: Application of random subspace‐based novel ensemble approaches</h3>
+                <p class="card-subtitle">Geological Journal (2024)</p>
+                <p><strong>Authors:</strong> Santosh, M., Arabameri, A., & Arora, A.</p>
+                <a href="https://doi.org/10.1002/gj.4932" target="_blank" class="btn btn-link">View DOI →</a>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Landslide susceptibility mapping: application of novel hybridization of rotation forests (RF) and Java decision trees (J48)</h3>
-                    <p class="card-subtitle">Soft Computing, 27, 17387–17402 (2023)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Liang, L., Cui, H., Arabameri, A., Arora, A., & Seyed Danesh, A.</p>
-                    <a href="https://doi.org/10.1007/s00500-023-08951-x" target="_blank" class="btn btn-link">View DOI →</a>
-                </div>
+            <div class="card-no-img">
+                <h3>Landslide susceptibility mapping: application of novel hybridization of rotation forests (RF) and Java decision trees (J48)</h3>
+                <p class="card-subtitle">Soft Computing, 27, 17387–17402 (2023)</p>
+                <p><strong>Authors:</strong> Liang, L., Cui, H., Arabameri, A., Arora, A., & Seyed Danesh, A.</p>
+                <a href="https://doi.org/10.1007/s00500-023-08951-x" target="_blank" class="btn btn-link">View DOI →</a>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Flood susceptibility prediction using multi criteria decision analysis and bivariate statistical models: a case study of Lower Kosi River Basin</h3>
-                    <p class="card-subtitle">Stochastic Environmental Research and Risk Assessment, 37, 1855–1875 (2022)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Arora, A.*</p>
-                    <a href="https://doi.org/10.1007/s00477-022-02370-4" target="_blank" class="btn btn-link">View DOI →</a>
-                </div>
+            <div class="card-no-img">
+                <h3>Flood susceptibility prediction using multi criteria decision analysis and bivariate statistical models: a case study of Lower Kosi River Basin</h3>
+                <p class="card-subtitle">Stochastic Environmental Research and Risk Assessment, 37, 1855–1875 (2022)</p>
+                <p><strong>Authors:</strong> Arora, A.*</p>
+                <a href="https://doi.org/10.1007/s00477-022-02370-4" target="_blank" class="btn btn-link">View DOI →</a>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Prediction of groundwater nitrate concentration in a semiarid region using hybrid Bayesian artificial intelligence approaches</h3>
-                    <p class="card-subtitle">Environmental Science and Pollution Research, 29, 20421–20436 (2022)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Alkindi, K. M., Mukherjee, K., Pandey, M., Arora, A., et al.</p>
-                    <a href="https://doi.org/10.1007/s11356-021-17224-9" target="_blank" class="btn btn-link">View DOI →</a>
-                </div>
+            <div class="card-no-img">
+                <h3>Prediction of groundwater nitrate concentration in a semiarid region using hybrid Bayesian artificial intelligence approaches</h3>
+                <p class="card-subtitle">Environmental Science and Pollution Research, 29, 20421–20436 (2022)</p>
+                <p><strong>Authors:</strong> Alkindi, K. M., Mukherjee, K., Pandey, M., Arora, A., et al.</p>
+                <a href="https://doi.org/10.1007/s11356-021-17224-9" target="_blank" class="btn btn-link">View DOI →</a>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Flood susceptibility modelling in a subtropical humid low-relief alluvial plain environment: Application of novel machine learning ensemble approach</h3>
-                    <p class="card-subtitle">Frontiers in Earth Science, 9, 659296 (2021)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Pandey, M., Arora, A.*, Arabameri, A., Costache, R., Lee, S.</p>
-                    <a href="https://doi.org/10.3389/feart.2021.659296" target="_blank" class="btn btn-link">View DOI →</a>
-                </div>
+            <div class="card-no-img">
+                <h3>Flood susceptibility modelling in a subtropical humid low-relief alluvial plain environment: Application of novel machine learning ensemble approach</h3>
+                <p class="card-subtitle">Frontiers in Earth Science, 9, 659296 (2021)</p>
+                <p><strong>Authors:</strong> Pandey, M., Arora, A.*, Arabameri, A., Costache, R., Lee, S.</p>
+                <a href="https://doi.org/10.3389/feart.2021.659296" target="_blank" class="btn btn-link">View DOI →</a>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Comparative evaluation of geospatial scenario-based land change simulation models using landscape metrics</h3>
-                    <p class="card-subtitle">Ecological Indicators, 128, 107810 (2021)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Arora, A., Pandey, M., Mishra, V.N., et al.</p>
-                    <a href="https://doi.org/10.1016/j.ecolind.2021.107810" target="_blank" class="btn btn-link">View DOI →</a>
-                </div>
+            <div class="card-no-img">
+                <h3>Comparative evaluation of geospatial scenario-based land change simulation models using landscape metrics</h3>
+                <p class="card-subtitle">Ecological Indicators, 128, 107810 (2021)</p>
+                <p><strong>Authors:</strong> Arora, A., Pandey, M., Mishra, V.N., et al.</p>
+                <a href="https://doi.org/10.1016/j.ecolind.2021.107810" target="_blank" class="btn btn-link">View DOI →</a>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Optimization of State-of-the-Art Fuzzy-Metaheuristic ANFIS-Based Machine Learning Models for Flood Susceptibility Prediction Mapping</h3>
-                    <p class="card-subtitle">Science of the Total Environment, 750, 141565 (2021)</p>
+            <div class="pub-card">
+                <div class="pub-visual">
+                    <a href="MGP_Trad_vs_ML.png" target="_blank">
+                        <img src="MGP_Trad_vs_ML.png" alt="ANFIS Flood Prediction Visual Abstract">
+                    </a>
                 </div>
-                <div class="card-content">
+                <div class="pub-content">
+                    <span class="pub-tag">Science of the Total Environment (2021)</span>
+                    <h3>Optimization of State-of-the-Art Fuzzy-Metaheuristic ANFIS-Based Machine Learning Models</h3>
                     <p><strong>Authors:</strong> Arora, A., Arabameri, A., Pandey, M., et al.</p>
+                    <p>The <b>ANFIS-GA</b> model proved to be the most effective predictor (92.4% accuracy), outperforming PSO and DE variants.</p>
                     <a href="https://doi.org/10.1016/j.scitotenv.2020.141565" target="_blank" class="btn btn-link">View DOI →</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
+            <div class="pub-card">
+                <div class="pub-visual">
+                    <a href="MGP_Trad_vs_ML.png" target="_blank">
+                        <img src="MGP_Trad_vs_ML.png" alt="Bivariate Models Visual Abstract">
+                    </a>
+                </div>
+                <div class="pub-content">
+                    <span class="pub-tag">Geocarto International (2021)</span>
                     <h3>Flash-flood propagation susceptibility estimation using weights of evidence and their novel ensembles</h3>
-                    <p class="card-subtitle">Geocarto International, 37(25), 8361-8393 (2021)</p>
-                </div>
-                <div class="card-content">
                     <p><strong>Authors:</strong> Costache, R., ... Arora, A., et al.</p>
+                    <p>This study establishes the <b>Bivariate Statistical baselines</b> (Frequency Ratio / Shannon's Entropy) referenced in the comparative analysis visual.</p>
+                    <a href="#" class="btn btn-link">View Paper →</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Flood Susceptibility Assessment Using Novel Ensemble of Hyperpipes and Support Vector Regression Algorithms</h3>
-                    <p class="card-subtitle">Water, 13 (2), 1–27 (2021)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Saha, A., ... Arora, A., et al.</p>
-                </div>
+            <div class="card-no-img">
+                <h3>Flood Susceptibility Assessment Using Novel Ensemble of Hyperpipes and Support Vector Regression Algorithms</h3>
+                <p class="card-subtitle">Water, 13 (2), 1–27 (2021)</p>
+                <p><strong>Authors:</strong> Saha, A., ... Arora, A., et al.</p>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Climate Change Effect on Water Resources in Varanasi District, India</h3>
-                    <p class="card-subtitle">Meteorological Applications, 27 (1), 1–16 (2020)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Nistor, M. M., ... Arora, A., et al.</p>
-                </div>
+            <div class="card-no-img">
+                <h3>Climate Change Effect on Water Resources in Varanasi District, India</h3>
+                <p class="card-subtitle">Meteorological Applications, 27 (1), 1–16 (2020)</p>
+                <p><strong>Authors:</strong> Nistor, M. M., ... Arora, A., et al.</p>
             </div>
 
-             <div class="card">
-                <div class="card-header">
-                    <h3>K-Fold and State-of-the-Art Metaheuristic Machine Learning Approaches for Groundwater Potential Modelling</h3>
-                    <p class="card-subtitle">Water Resources Management, 35, 1837–1869 (2021)</p>
+            <div class="pub-card">
+                <div class="pub-visual">
+                    <a href="K-fold_GPM.png" target="_blank">
+                        <img src="K-fold_GPM.png" alt="Groundwater Potential Visual Abstract">
+                    </a>
                 </div>
-                <div class="card-content">
+                <div class="pub-content">
+                    <span class="pub-tag">Water Resources Management (2021)</span>
+                    <h3>K-Fold and Metaheuristic Machine Learning Approaches for Groundwater Potential Modelling</h3>
                     <p><strong>Authors:</strong> Arabameri, A., Arora, A., et al.</p>
+                    <p>Developed the <b>ANFIS-DE model</b> which pinpointed groundwater hotspots with an excellent AUC score of <b>0.934</b>.</p>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Flood Susceptibility Mapping Using a Novel Deep Learning Model Combining Multilayer Perceptron and Autoencoder Neural Networks</h3>
-                    <p class="card-subtitle">Journal of Flood Risk Management, 14 (1) (2020)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Ahmadlou, M., ... Arora, A., et al.</p>
-                </div>
+            <div class="card-no-img">
+                <h3>Flood Susceptibility Mapping Using a Novel Deep Learning Model Combining Multilayer Perceptron and Autoencoder Neural Networks</h3>
+                <p class="card-subtitle">Journal of Flood Risk Management, 14 (1) (2020)</p>
+                <p><strong>Authors:</strong> Ahmadlou, M., ... Arora, A., et al.</p>
             </div>
 
             <h2 class="subsection-title" style="margin-top: 3rem;">Book Chapters & Editorials</h2>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Evaluation of Machine Learning Approaches for Flood Hazard Mapping Over the Argens Basin, France</h3>
-                    <p class="card-subtitle">Advances in Hydroinformatics (SimHydro 2023), Springer Water (2024)</p>
+            <div class="pub-card">
+                <div class="pub-visual">
+                    <a href="FHM_Argens.png" target="_blank">
+                        <img src="FHM_Argens.png" alt="ML vs Traditional Models Visual Abstract">
+                    </a>
                 </div>
-                <div class="card-content">
+                <div class="pub-content">
+                    <span class="pub-tag">Advances in Hydroinformatics (2024)</span>
+                    <h3>Evaluation of ML Approaches for Flood Hazard Mapping Over the Argens Basin, France</h3>
                     <p><strong>Authors:</strong> Arora, A.*, Nicolle, P., Payrastre, O.</p>
+                    <p>A critical comparison of RF, XGB, and ANN against high-resolution hydrodynamic models (1000-year flood maps).</p>
                     <a href="https://doi.org/10.1007/978-981-97-4072-7_7" target="_blank" class="btn btn-link">View Chapter →</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Linkage Between Forest Fires and Meteorological Parameters Using Spatial Clustering</h3>
-                    <p class="card-subtitle">Geo-Information for Disaster Monitoring and Management (2024)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Pandey, M., Arora, A.*, Geesupalli, P.</p>
-                </div>
+            <div class="card-no-img">
+                <h3>Linkage Between Forest Fires and Meteorological Parameters Using Spatial Clustering</h3>
+                <p class="card-subtitle">Geo-Information for Disaster Monitoring and Management (2024)</p>
+                <p><strong>Authors:</strong> Pandey, M., Arora, A.*, Geesupalli, P.</p>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Co-Editor: Advances in Remote Sensing Technology and the Three Poles</h3>
-                    <p class="card-subtitle">Wiley Publications, USA (2022)</p>
-                </div>
-                <div class="card-content">
-                    <p>Co-edited the comprehensive volume and contributed to 4 chapters regarding Landscape Modeling, Spectral Indices, and Morphometry Software.</p>
-                </div>
+            <div class="card-no-img">
+                <h3>Co-Editor: Advances in Remote Sensing Technology and the Three Poles</h3>
+                <p class="card-subtitle">Wiley Publications, USA (2022)</p>
+                <p>Co-edited the comprehensive volume and contributed to 4 chapters regarding Landscape Modeling, Spectral Indices, and Morphometry Software.</p>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Statistical Analysis of Major Flood Events During 1980-2015 in Middle Ganga Plain</h3>
-                    <p class="card-subtitle">Spatial Information Science for Natural Resource Management, IGI Global (2020)</p>
-                </div>
-                <div class="card-content">
-                    <p><strong>Authors:</strong> Arora, A., Siddiqui, M. A., & Pandey, M.</p>
-                </div>
+            <div class="card-no-img">
+                <h3>Statistical Analysis of Major Flood Events During 1980-2015 in Middle Ganga Plain</h3>
+                <p class="card-subtitle">Spatial Information Science for Natural Resource Management, IGI Global (2020)</p>
+                <p><strong>Authors:</strong> Arora, A., Siddiqui, M. A., & Pandey, M.</p>
             </div>
 
         </div>
@@ -245,10 +277,8 @@
     <footer class="footer">
         <div class="container">
             <p>© 2025 Dr. Aman Arora. All rights reserved.</p>
-            <p class="footer-subtitle">AI & Spatial Data Scientist | Marie Curie Fellow</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
