@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Gallery - Dr. Aman Arora</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+        .gallery-caption {
+            padding: 20px;
+        }
+        .gallery-caption h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+        .gallery-caption p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Dr. Aman Arora</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="gallery.html" class="active">Visual Gallery</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="conferences.html">Conferences</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Research Gallery</h1>
+            <p>Visual Abstracts, Spatial Models, and Infographics</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <a href="Siren_optimization.png" target="_blank">
+                        <img src="Siren_optimization.png" alt="Siren Optimization Infographic">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Optimizing Disaster Warnings</h3>
+                        <p>A comparison of Traditional Expert-Based planning vs. AI-driven optimization (NSGA-II) for siren placement. The Modern Method increased dwelling coverage from 81.7% to 96.5%.</p>
+                        <a href="#" class="btn btn-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="image_961a69.png" target="_blank">
+                        <img src="image_961a69.png" alt="Lyon Noise Map">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Lyon's Population & Road Noise</h3>
+                        <p>Hexbin density analysis showing the "Quiet Night" exposure levels for Lyon's 520k population. Highlights areas exceeding WHO recommended noise limits.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="Kosi_SciRep.png" target="_blank">
+                        <img src="Kosi_SciRep.png" alt="Kosi Flood Risk">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Flood Risk: Kosi Megafan</h3>
+                        <p>Scientific Reports (2025): ANN-MLP model delivering 98.2% accuracy in identifying flood susceptibility zones in the Himalayan foreland basin.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="Taiwan_LULC.png" target="_blank">
+                        <img src="Taiwan_LULC.png" alt="Taiwan Urban Paradox">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Taiwan's Urban Paradox</h3>
+                        <p>Visualizing the disconnect between a 140% increase in built-up area and negative population growth. A critical study for sustainable urban planning.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="FHM_Argens.png" target="_blank">
+                        <img src="FHM_Argens.png" alt="Argens Basin Flood Mapping">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>ML vs. Hydrodynamic Models</h3>
+                        <p>Validating Machine Learning (RF, XGB) as a surrogate for computationally expensive hydrodynamic flood models in the Argens Basin, France.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <a href="K-fold_GPM.png" target="_blank">
+                        <img src="K-fold_GPM.png" alt="Groundwater Potential">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>AI for Groundwater</h3>
+                        <p>Using ANFIS-DE hybrid models to pinpoint groundwater hotspots based on 14 environmental factors including Lithology and TST.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Dr. Aman Arora. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
